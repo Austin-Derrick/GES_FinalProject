@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -29,7 +31,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     float horizontalInput = 0;
     bool isJumpPressed = false;
-
+    public float xVelocity { get; private set; }
+    public Vector2 velocityVector { get; private set; }
+    public Vector2 jumpVector { get; private set; }
+    public bool isJumping = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +53,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float xVelocity = horizontalInput * speed;
-        playerRB.velocity = new Vector2(xVelocity, playerRB.velocity.y);
+        xVelocity = horizontalInput * speed;
+        velocityVector = new Vector2(xVelocity, playerRB.velocity.y);
+        playerRB.velocity = velocityVector;
 
         if (isFacingRight && horizontalInput < 0 || !isFacingRight && horizontalInput > 0)
         {
@@ -66,12 +72,14 @@ public class PlayerController : MonoBehaviour
 
         if (isJumpPressed && isOnGround)
         {
-            playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isJumping = true;
+            jumpVector = Vector2.up * jumpForce;
+            playerRB.AddForce(jumpVector, ForceMode2D.Impulse);
         }
         // updates animator system after updating player movement
-        //animator.SetBool("isOnGround", isOnGround);
-        //animator.SetFloat("xSpeed", Mathf.Abs(playerRB.velocity.x));
-        //animator.SetFloat("yVelocity", playerRB.velocity.y);
+        animator.SetBool("isOnGround", isOnGround);
+        animator.SetFloat("xSpeed", Mathf.Abs(playerRB.velocity.x));
+        animator.SetFloat("yVelocity", playerRB.velocity.y);
 
         clearInputs();
     }
@@ -92,5 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = 0;
         isJumpPressed = false;
+        isJumping = false;
     }
+    
 }
