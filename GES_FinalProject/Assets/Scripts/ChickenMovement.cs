@@ -15,6 +15,8 @@ public class ChickenMovement : MonoBehaviour
     bool isMoving = false;
     private List<Vector2> playerVelocities;
     private int count;
+    private bool isFacingLeft = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,14 @@ public class ChickenMovement : MonoBehaviour
         jumpVector = player.jumpVector;
         playerVelocities = new List<Vector2>();
         count = 0;
+    }
+
+    private void Update()
+    {
+        if (isFacingLeft && velocityVector.x > 0 || !isFacingLeft && velocityVector.x < 0)
+        {
+            flip();
+        }
     }
 
     private void FixedUpdate()
@@ -47,6 +57,18 @@ public class ChickenMovement : MonoBehaviour
         {
             chickenRB.AddForce(jumpVector);
         }
+    }
+
+    private void flip()
+    {
+        isFacingLeft = !isFacingLeft;
+        Vector3 scale = transform.localScale;
+        scale.x = isFacingLeft ? 1 : -1;
+
+        if (isFacingLeft) scale.x = 1;
+        else scale.x = -1;
+
+        transform.localScale = scale;
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)

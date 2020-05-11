@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Chicken
+  - Enemy
+  - Ground
+  - LivesManager
+  - ScoreManager
   layers:
   - Default
   - TransparentFX
