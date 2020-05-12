@@ -1433,22 +1433,32 @@ PrefabInstance:
     - target: {fileID: 486692734581822453, guid: 20df60893f62f1e4f99e39df6a98be8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9000006
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 486692734581822453, guid: 20df60893f62f1e4f99e39df6a98be8f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6999998
       objectReference: {fileID: 0}
     - target: {fileID: 486692735823544338, guid: 20df60893f62f1e4f99e39df6a98be8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9000006
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 486692735823544338, guid: 20df60893f62f1e4f99e39df6a98be8f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6999998
       objectReference: {fileID: 0}
     - target: {fileID: 6118979282337405154, guid: 20df60893f62f1e4f99e39df6a98be8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.43
+      value: -18.9
       objectReference: {fileID: 0}
     - target: {fileID: 6118979282337405154, guid: 20df60893f62f1e4f99e39df6a98be8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6118979282337405154, guid: 20df60893f62f1e4f99e39df6a98be8f,
         type: 3}
@@ -1500,7 +1510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2D Player Rig
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1081072641, guid: 20df60893f62f1e4f99e39df6a98be8f, type: 3}
+    - {fileID: 1081072642, guid: 20df60893f62f1e4f99e39df6a98be8f, type: 3}
+    - {fileID: 1081072643, guid: 20df60893f62f1e4f99e39df6a98be8f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 20df60893f62f1e4f99e39df6a98be8f, type: 3}
 --- !u!1 &1079349971
 GameObject:
@@ -1554,49 +1567,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1035894397}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1081072641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081072635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2ce564515b99e844a496757ba7c933b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Chickens:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &1081072642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081072635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0243afe2da739304d84f699d23b3f4e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCollider: {fileID: 1081072644}
---- !u!114 &1081072643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081072635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f848282e8b15d43a632ad917f78e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1081072644
 BoxCollider2D:
   m_ObjectHideFlags: 0
