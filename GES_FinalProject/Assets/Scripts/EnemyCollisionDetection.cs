@@ -29,7 +29,6 @@ public class EnemyCollisionDetection : MonoBehaviour
             Debug.Log("Collided with chicken");
             playerPoints.incrementScore();
             health--;
-            Destroy(collision.gameObject);
         }
         else if (collision.gameObject.CompareTag("Player"))
         {

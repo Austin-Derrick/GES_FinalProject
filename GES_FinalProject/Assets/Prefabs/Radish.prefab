@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 5681254551749450109}
   - component: {fileID: 7511538429320376579}
   - component: {fileID: 5628162091352359130}
+  - component: {fileID: 5018132334868841709}
+  - component: {fileID: 1822044295}
+  - component: {fileID: 3998758929850820587}
   m_Layer: 0
   m_Name: Radish
   m_TagString: Enemy
@@ -150,4 +153,43 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &5018132334868841709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681254551749450108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7442e56f474ae04d937f2eb15cd600f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1822044295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681254551749450108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b466be7c2ac81f94d8bffe912367fb45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+--- !u!114 &3998758929850820587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681254551749450108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dca6fe7988b3174f8e5564574044f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWayPoint: {fileID: 0}
+  rightWayPoint: {fileID: 0}

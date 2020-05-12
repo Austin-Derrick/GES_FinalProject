@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - LivesManager
   - ScoreManager
+  - WayPoint
   layers:
   - Default
   - TransparentFX

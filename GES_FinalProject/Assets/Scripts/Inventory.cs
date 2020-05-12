@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-     [SerializeField] GameObject[] Chickens = new GameObject[5];
-    private int count = 0;
+     [SerializeField] GameObject Chicken;
 
     public void addChicken(GameObject collidedChicken)
     {
-        if (count < 5)
-        {
-            Chickens[count] = collidedChicken;
-        }
+        Chicken = collidedChicken;
     }
 
     public GameObject getChicken()
     {
-        return Chickens[count];
+        return Chicken;
     }
 }

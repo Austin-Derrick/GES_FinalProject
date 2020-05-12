@@ -15,9 +15,26 @@ public class StartChickenMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            movementScript.enabled = true;
-            chickenCollider.enabled = false;
-            this.enabled = false;
+            disableCollider();
         }
+    }
+
+    void disableCollider()
+    {
+        movementScript.enabled = true;
+        chickenCollider.enabled = false;
+        this.enabled = false;
+    }
+
+    public void startEnable()
+    {
+        Invoke("enableCollider", 1.0f);
+    }
+
+    private void enableCollider()
+    {
+        movementScript.enabled = false;
+        chickenCollider.enabled = true;
+        this.enabled = true;
     }
 }
