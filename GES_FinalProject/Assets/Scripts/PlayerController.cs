@@ -63,12 +63,11 @@ public class PlayerController : MonoBehaviour
         }
 
         int numHits = collider.Cast(Vector2.down, hits, distanceToCheck);
+        
         isOnGround = numHits > 0;
 
         Vector2 rayStart = new Vector2(collider.bounds.center.x, collider.bounds.min.y);
         Vector2 rayDir = Vector2.down * distanceToCheck;
-
-        Debug.DrawRay(rayStart, rayDir, Color.red, 1f);
 
         if (isJumpPressed && isOnGround)
         {
@@ -76,6 +75,7 @@ public class PlayerController : MonoBehaviour
             jumpVector = Vector2.up * jumpForce;
             playerRB.AddForce(jumpVector, ForceMode2D.Impulse);
         }
+
         // updates animator system after updating player movement
         animator.SetBool("isOnGround", isOnGround);
         animator.SetFloat("xSpeed", Mathf.Abs(playerRB.velocity.x));

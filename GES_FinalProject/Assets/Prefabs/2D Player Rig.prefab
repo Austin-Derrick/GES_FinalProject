@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1081072641}
   - component: {fileID: 1081072642}
   - component: {fileID: 1081072643}
+  - component: {fileID: 5970608908008259837}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -237,6 +238,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 1081072644}
   chickenMovementScript: {fileID: 0}
+--- !u!114 &5970608908008259837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486692733946020428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cace870b74c9a9d4cb74f2ac96e96970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &486692734581822217
 GameObject:
   m_ObjectHideFlags: 0
